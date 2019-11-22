@@ -1,0 +1,13 @@
+ <section> 
+         <ul>
+                <li>
+                                <div class="myContainer" *ngFor="let box of boxes">
+                                <div name="comment" class="commentArea">{{box.data}}</div>
+                                                <input type="text" class="commInput" placeholder="to comment" #commentInput>
+                                                <button class="commSend" (click)="create($event, commentInput.value); commentInput.value=''">send</button>
+                                <button class="delete" (click)="delete(box)"> X </button>
+                        </div>
+                </li>
+        </ul>
+
+</section>
